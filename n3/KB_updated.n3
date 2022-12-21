@@ -1,0 +1,190 @@
+@prefix classes: <URN:class> .
+@prefix ind: <URN:inds:> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prop: <URN:prop:> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ind:Accuracy prop:causes ind:Warning ;
+    prop:hasMinAccuracy "70" ;
+    prop:hasPreferredAccuracy "90" .
+
+ind:AggregatedDataset a classes:Dataset ;
+    prop:hasSize ind:sizeDataset .
+
+ind:Dataset prop:causes ind:Warning ;
+    prop:hasMinSize "500" .
+
+ind:Developers a classes:Executor,
+        classes:Mechanism .
+
+ind:background a classes:features ;
+    owl:oneOf ( "ba:bal antilles" "ba:void" "ba:simple" "ba:north" "ba:west" "ba:pohutukawa" "ba:ash" "ba:y3" "ba:beach party" "ba:robodistrict" "ba:blast zone" "ba:chaos" "ba:dot" "ba:hallucinations" "ba:northernlights" "ba:storm" "ba:g twenty" "ba:background sea" "ba:5" "ba:overcast" "ba:3" "ba:fiji water" "ba:desert" "ba:cool" "ba:half & half" "ba:turqoise" "ba:sankuzusi akane" "ba:viola" "ba:citrus" "ba:starbase" "ba:sunrise" "ba:lumps and bumps " "ba:salmon" "ba:unfinished bridge" "ba:blood moon" "ba:g eight" "ba:microchip crimson" "ba:forest" "ba:solid color" "ba:sippou matsuba" "ba:c one" "ba:c three" "ba:c five" "ba:c two" "ba:g twenty one" "ba:punkz rock day" "ba:turquoise" "ba:brick" "ba:total darkness" "ba:flame" "ba:seigaiha sumire" "ba:background ise" "ba:dawn" "ba:tea" "ba:smooth" "ba:space aurora (moonlight)" "ba:bronze" "ba:shadows of sybaria (dreamstate gaze)" "ba:sunset" "ba:retro" "ba:medium rare" "ba:charcoal" "ba:office" "ba:dark brown" "ba:eclipse" "ba:panky" "ba:bloody mary" "ba:19e" "ba:rainnoir" "ba:boulevard" "ba:jasper" "ba:big moon" "ba:lila" "ba:marshmallow" "ba:grass" "ba:rasta space" "ba:ss monke biz" "ba:smoke" "ba:doomed" "ba:lava" "ba:solid af" "ba:city" "ba:winter" "ba:fun fair" "ba:walls" "ba:spirit fireflies" "ba:1 dollars apes" "ba:apocalypse" "ba:acid jungle" "ba:jurrassic jungle" "ba:meadowland" "ba:ocean" "ba:fallout" "ba:g thirteen" "ba:biohazard" "ba:space" "ba:wasteland" "ba:sankuzusi daidai" "ba:setting sun" "ba:sankuzusi asagi" "ba:kaminari attack" "ba:dot daidai" "ba:silver" "ba:crimson" "ba:watchingyou" "ba:dark kgf pattern" "ba:43e" "ba:snow" "ba:rainbowactive plant" "ba:dark khaki" "ba:jungle" "ba:colombones" "ba:emerald" "ba:common 4 " "ba:beige" "ba:entrance" "ba:grassy knoll" "ba:could sky" "ba:rosewood" "ba:blureen colorclash" "ba:wei dojo" "ba:wei streets" "ba:great wall of wei" "ba:water fall" "ba:mana portal" "ba:blanc" "ba:burlywood" "ba:buildings" "ba:messengers of the old god" "ba:pale oak" "ba:stone terrace" "ba:scarlet" "ba:sankuzusi kurenai" "ba:67" "ba:shifty" "ba:seafoam" "ba:hell" "ba:sun" "ba:ocher" "ba:vanilla" "ba:pure silver" "ba:elder" "ba:light violet" "ba:surf" "ba:mint" "ba:passionfruit" "ba:treasure room" "ba:background 6" "ba:city of fireflies" "ba:lilac" "ba:apricot" "ba:teal" "ba:amethyst" "ba:tan" "ba:gold" "ba:village" "ba:night" "ba:olive" "ba:cyan" "ba:black" "ba:skyscraper" "ba:g twenty two" "ba:metropolis (stasis)" "ba:plum" "ba:clouds" "ba:neon city" "ba:scribble" "ba:crater" "ba:heart rug" "ba:beach" "ba:magenta" "ba:celestial diamond" "ba:stars" "ba:coral" "ba:album" "ba:bamboo garden" "ba:cream" "ba:darkroom" "ba:mutated cian" "ba:the raverse" "ba:human" "ba:ship wreck" "ba:school fish" "ba:atlantian city" "ba:mars" "ba:fuchsia" "ba:violet" "ba:moss" "ba:wallpaper" "ba:iron" "ba:mutated shifty" "ba:seigaiha asagi" "ba:dark city" "ba:octarine" "ba:navy" "ba:blood" "ba:wine gradient" "ba:the plateau" "ba:lime" "ba:large tower" "ba:twilight" "ba:ice floes" "ba:volcano" "ba:metropolis" "ba:rose" "ba:construction zone" "ba:gradient" "ba:brown" "ba:frosty" "ba:radioactive" "ba:aqua" "ba:Empty" "ba:aquamarine" "ba:blue" "ba:green" "ba:grey" "ba:orange" "ba:pink" "ba:purple" "ba:red" "ba:white" "ba:yellow" ) .
+
+ind:clothes a classes:features ;
+    owl:oneOf ( "cl:demon armour" "cl:night" "cl:galactic council" "cl:castaway" "cl:unapparent" "cl:turtle neck" "cl:m2_bandolier" "cl:saturn tank top" "cl:eth armor" "cl:flower" "cl:bridalveil" "cl:26" "cl:0" "cl:toxic" "cl:track clothing" "cl:palm leaf" "cl:jumpin" "cl:hospital gown" "cl:lightning" "cl:spiked collar clothing" "cl:brown eskimo" "cl:teal" "cl:borealis" "cl:fake superman cape" "cl:plated samurai armour (burgundy)" "cl:archer" "cl:nfl" "cl:f1" "cl:anime costume 3" "cl:tank top" "cl:planetsider (sunlight)" "cl:hooded mage's cloak" "cl:benkei qipao" "cl:mummy" "cl:parka" "cl:ak" "cl:traditional" "cl:bandage" "cl:mustard hoodie" "cl:light armor" "cl:silken hooded cloak" "cl:logan fail" "cl:police_uniform" "cl:zen kimono" "cl:body armour" "cl:violet puffer" "cl:turtle neck pp" "cl:m1 guayabera" "cl:30a" "cl:jeeves" "cl:scarlet ghost" "cl:pauldrons brown" "cl:m1 rainbow suspenders" "cl:holographic hoodie" "cl:magician vest" "cl:cardigan" "cl:box" "cl:basketball top" "cl:vest bandage pants" "cl:armor pants" "cl:bow tie" "cl:glossy high-neck" "cl:rainbow_suspenders" "cl:ens tactical" "cl:prom_dress" "cl:m1 gacc hoodie" "cl:zeus" "cl:camo" "cl:calvus" "cl:plain sweater" "cl:tactical vest" "cl:nood " "cl:basketball jersey (n)" "cl:jedi" "cl:warrior" "cl:wheres_wally_jumper" "cl:outback" "cl:shadow dancer" "cl:spiked pad" "cl:prison" "cl:nothing" "cl:maroon yukata" "cl:34b" "cl:renga racing team" "cl:pullover" "cl:ignis" "cl:master 8" "cl:bumble bee" "cl:lovey-dovey jumper" "cl:greaser" "cl:hanbok pants" "cl:anime costume 6" "cl:anime costume 5" "cl:nude" "cl:suspenders" "cl:sweater weather" "cl:trap tie" "cl:rally time" "cl:toilet_paper_chain" "cl:pixel deconstruction brown" "cl:trippy t" "cl:punkdress" "cl:bone_necklace" "cl:sol" "cl:clothes15original" "cl:nftk1ng" "cl:scientist" "cl:smart bubblegum" "cl:basketball jersey" "cl:rotters jersey" "cl:rainbow braces" "cl:sporty hoodie" "cl:hall monitor" "cl:female school uniform" "cl:l2 silver dog tags" "cl:beach tank top" "cl:bw stripes" "cl:halterdress" "cl:colonial" "cl:garçon" "cl:dirty tank " "cl:nurse onesie" "cl:bandolier" "cl:tanktop" "cl:guayabera" "cl:biker" "cl:turtleneck" "cl:sleeveless" "cl:puffy vest" "cl:hawaiian" "cl:bone necklace" "cl:pink" "cl:green" "cl:robe" "cl:grey" "cl:bell hop " "cl:thobe with bisht" "cl:violet stripes" "cl:naked" "cl:chain cloth" "cl:cowboy" "cl:king's son" "cl:bballer" "cl:flannel" "cl:walking dead sheriff" "cl:villager tan" "cl:trap tv" "cl:torn atlantian" "cl:bare chest" "cl:hoodie" "cl:aubergine" "cl:safari" "cl:lime" "cl:hip hop" "cl:caveman" "cl:basic clothe" "cl:tomb explorer" "cl:lavender" "cl:vest" "cl:work_vest" "cl:banana scale" "cl:wearpack" "cl:pirate" "cl:hiphop" "cl:monochrome stripes" "cl:classic" "cl:puffy_vest" "cl:turquoise" "cl:prom dress" "cl:tie dye" "cl:work vest" "cl:orange" "cl:gold" "cl:rainbow suspenders" "cl:yellow" "cl:service" "cl:purple" "cl:pelt" "cl:oceanic" "cl:lumberjack" "cl:Empty" "cl:black" "cl:blue" "cl:coat" "cl:jacket" "cl:none" "cl:red" "cl:shirt" "cl:suit" "cl:tee" "cl:toga" "cl:white" ) .
+
+ind:eyes a classes:features ;
+    owl:oneOf ( "ey:sleep_deprived" "ey:jinkies" "ey:8_bit" "ey:ruffled" "ey:baked" "ey:round eyes" "ey:not gonna take it" "ey:clubmasters" "ey:silver aviators" "ey:bloodshot eyes" "ey:standard" "ey:circleeye6" "ey:rusty goggles" "ey:original" "ey:x_eyes" "ey:spiral" "ey:sluggish" "ey:shock" "ey:ultra_realistic" "ey:abyssal" "ey:stareyes shades" "ey:0" "ey:reading glasses" "ey:1" "ey:flames" "ey:ethmoji" "ey:original light" "ey:ice eagle" "ey:fluro shades" "ey:business eyes" "ey:demon blood" "ey:mean eyes" "ey:sigh" "ey:regular eyes" "ey:blood shot " "ey:round scumbag" "ey:side eye" "ey:crossed eyes" "ey:look up" "ey:burt" "ey:firoza orb" "ey:yup" "ey:cubed eyes" "ey:stunning amber" "ey:shocked eye" "ey:over 9000" "ey:low eyed" "ey:lime" "ey:kawaii" "ey:stoned af" "ey:><" "ey:relaxed fuchsia" "ey:cursed eyes" "ey:oof" "ey:rotten tsukiyomi mizuiro" "ey:handsome ou" "ey:wagmi" "ey:ootw" "ey:stare dark" "ey:emerald eyes" "ey:thick rim" "ey:worried" "ey:dollar" "ey:tear" "ey:meditative" "ey:dark eyeliner" "ey:bandit" "ey:cheeky" "ey:cheeky toad" "ey:ahammm" "ey:beauty" "ey:cool shades" "ey:concerned sun" "ey:relaxed violet" "ey:concerned fuchsia" "ey:relaxed" "ey:pac man" "ey:blushing" "ey:btc eyes" "ey:cyborg eye" "ey:superhero" "ey:high fashion" "ey:spooky" "ey:eyes" "ey:slime" "ey:lost" "ey:crazed" "ey:cursed" "ey:violet disappointed" "ey:bitcoin" "ey:22a" "ey:winking" "ey:grudgehorror" "ey:cartoon" "ey:kawai" "ey:factory default" "ey:half open (jasper)" "ey:asian frown fuchsia" "ey:concerned violet" "ey:frown fuchsia" "ey:asian concern fuchsia" "ey:sunset shades" "ey:female" "ey:rainbow glass right" "ey:xxx flat" "ey:earth" "ey:led" "ey:left eye tear" "ey:chill eyes" "ey:upturned.thunder" "ey:derpy" "ey:nevus" "ey:round shades" "ey:panda" "ey:oo" "ey:innocent heterochromatic" "ey:beedy" "ey:punk crosses" "ey:shocked big pupil" "ey:thug life" "ey:teary" "ey:clown eyes" "ey:hallow" "ey:dazed" "ey:pirate" "ey:calm" "ey:highsociety" "ey:left" "ey:one eye" "ey:round tears" "ey:right" "ey:crazy  eyes" "ey:arapawa.png" "ey:worry eyes" "ey:alien" "ey:cute eyes" "ey:xx (n)" "ey:lightning" "ey:hardened" "ey:goofy eyes" "ey:usd" "ey:sharingan" "ey:wastelander" "ey:small glasses" "ey:demonic" "ey:oldies" "ey:yen" "ey:meditating" "ey:determined" "ey:squinted" "ey:shutter shades" "ey:kawaiimidnight" "ey:blazed" "ey:faded" "ey:regal eclipse" "ey:45a" "ey:where are they" "ey:m1 sleep mask" "ey:bruised" "ey:blush" "ey:mm" "ey:hippie 1" "ey:cool guy" "ey:raised eyebrows" "ey:ghoul" "ey:delighted eyes" "ey:stern" "ey:base" "ey:hollow" "ey:machina" "ey:butterfly" "ey:ethereum" "ey:opened eyes" "ey:baby eyes" "ey:rainbow " "ey:anxious" "ey:mega glow" "ey:in love" "ey:cute crows" "ey:questioning" "ey:big dot" "ey:dizzy" "ey:potter" "ey:ready_set_hut" "ey:meditation" "ey:btfd standart" "ey:c17" "ey:bold iron" "ey:small dot" "ey:eye patch" "ey:l eyes" "ey:crying" "ey:eyetattoo" "ey:gamahiro" "ey:ozil" "ey:close " "ey:idle" "ey:bw lines" "ey:standard " "ey:doctor" "ey:verified" "ey:high scar" "ey:silver" "ey:nerdy" "ey:cat eye" "ey:mischief" "ey:bashful" "ey:dot glasses" "ey:scrappy" "ey:veteran" "ey:kosuke" "ey:aquatic" "ey:fighter" "ey:hoppy" "ey:striking" "ey:winking right eye" "ey:cry me a river" "ey:stareyes eyecat" "ey:toms" "ey:stiched tan" "ey:amber" "ey:grey" "ey:black" "ey:bionic" "ey:brown" "ey:laser" "ey:eyepatch" "ey:confuse" "ey:hypnotized" "ey:purple" "ey:white" "ey:regular" "ey:fortune glasses" "ey:cute" "ey:furious" "ey:quizzical" "ey:scientists" "ey:surprised" "ey:reptile" "ey:squinted eyeliner" "ey:rainbow" "ey:hippie" "ey:gloating" "ey:laughing" "ey:hypno" "ey:straight" "ey:squint" "ey:thin toon" "ey:need rest" "ey:puffy eye" "ey:ok" "ey:crossed" "ey:ray bans" "ey:open" "ey:dark" "ey:cyclopse" "ey:beaty" "ey:circle" "ey:beedy bold" "ey:wtf" "ey:stabbed" "ey:ahamm" "ey:original cafe" "ey:hunters" "ey:m2_cyborg" "ey:buttons" "ey:content" "ey:paper airplane" "ey:bandage" "ey:shades" "ey:high" "ey:sus" "ey:dot" "ey:vibin" "ey:falkeyed" "ey:tight cat" "ey:embarrassed" "ey:x" "ey:thuglyfe" "ey:peek a boo" "ey:drunk" "ey:blink" "ey:wise" "ey:original ice" "ey:round glasses" "ey:adorable" "ey:wink" "ey:monocle" "ey:hypnotise" "ey:steampunk" "ey:fortune eyes" "ey:fear" "ey:aviators" "ey:lazy" "ey:cool glasses" "ey:sleep" "ey:dead" "ey:og eyes" "ey:evil" "ey:oculus" "ey:glasses" "ey:lavender" "ey:dork" "ey:dots" "ey:stoned" "ey:piercing nose" "ey:glad" "ey:cat" "ey:fire" "ey:classic" "ey:3d" "ey:shocked" "ey:ouch" "ey:lazer" "ey:cross eyes" "ey:future visor" "ey:orange" "ey:gamatatsu" "ey:serious" "ey:im lookin u" "ey:spider" "ey:locked" "ey:gold" "ey:suspicious" "ey:lava" "ey:gamaken" "ey:doll" "ey:happy" "ey:holographic" "ey:scarlet" "ey:x eyes" "ey:beady" "ey:bulging" "ey:cyborg" "ey:hazel" "ey:scumbag" "ey:normal" "ey:pink" "ey:tearful" "ey:xx" "ey:blindfold" "ey:Empty" "ey:angry" "ey:bloodshot" "ey:blue" "ey:closed" "ey:coins" "ey:crazy" "ey:green" "ey:heart" "ey:red" "ey:robot" "ey:sad" "ey:sleepy" "ey:sunglasses" "ey:wide" "ey:yellow" "ey:zombie" ) .
+
+ind:function02 a classes:subFunctions ;
+    rdfs:label "Train model" ;
+    prop:SubFunction ind:function0 ;
+    prop:hasControl ind:MlRequirements,
+        ind:preprocessingRequirements ;
+    prop:hasMechanism ind:developers,
+        ind:nftportAPI ;
+    prop:hasOutput ind:trainedModel .
+
+ind:function34 a classes:subFunctions ;
+    rdfs:label "Aggregate data" ;
+    prop:SubFunction ind:function03 ;
+    prop:hasMechanism ind:developers,
+        ind:nftportAPI ;
+    prop:hasOutput ind:aggregatedData .
+
+ind:function35 a classes:subFunctions ;
+    rdfs:label "Preprocessing" ;
+    prop:SubFunction ind:function03 ;
+    prop:hasControl ind:preprocessingRequirements ;
+    prop:hasInput ind:aggregatedData ;
+    prop:hasMechanism ind:developers ;
+    prop:hasOutput ind:preparedData .
+
+ind:function36 a classes:subFunctions ;
+    rdfs:label "Train model" ;
+    prop:SubFunction ind:function03 ;
+    prop:hasControl ind:MlRequirements ;
+    prop:hasInput ind:preparedData,
+        ind:resultOfValuation ;
+    prop:hasMechanism ind:developers ;
+    prop:hasOutput ind:trainedModel .
+
+ind:function37 a classes:subFunctions ;
+    rdfs:label "Valuation" ;
+    prop:SubFunction ind:function03 ;
+    prop:hasControl ind:MlRequirements ;
+    prop:hasMechanism ind:developers ;
+    prop:hasOutput ind:resultOfValuation,
+        ind:trainedModel .
+
+ind:intervalExecutors prop:hasMaxExecutors "5" ;
+    prop:hasMinExecutors "3" .
+
+ind:mouth a classes:features ;
+    owl:oneOf ( "mo:mo" "mo:chubby_cheeks" "mo:le whoops" "mo:geeky braces" "mo:dribble" "mo:beige smiling beak" "mo:grey" "mo:high fangs" "mo:tooth" "mo:spoon" "mo:wavey" "mo:rabbit" "mo:thin" "mo:badass" "mo:pukerainbow" "mo:disappointed" "mo:dog" "mo:shit" "mo:eth pill" "mo:nude lips" "mo:1" "mo:0" "mo:ethmoji" "mo:sick" "mo:pouting" "mo:marilyn" "mo:sing" "mo:unamused" "mo:chad" "mo:alien" "mo:diamond grillz" "mo::c" "mo:licking" "mo:shadow" "mo:aw" "mo:cigaret" "mo:chomp" "mo:shout" "mo:mobster" "mo:nose ring" "mo:cute fang" "mo:shark" "mo:scream" "mo:nervous sweat" "mo:lol" "mo:vomit" "mo:bubblegum" "mo:uh" "mo:fang sugoi (mikan)" "mo:friendly" "mo:cheeky" "mo:squiggle" "mo:yummy" "mo:what" "mo:420 cigar" "mo:lip bite violet" "mo:serious lady" "mo:grrr" "mo:smoochers" "mo:sine wave" "mo:snarl" "mo:blow" "mo:skully tiger" "mo:simple" "mo:unshaven" "mo:closing" "mo:dark lips" "mo:06b" "mo:huh" "mo:disgusted" "mo:mustacho" "mo:ciggy" "mo:lip bite fuchsia" "mo:cuban cigar" "mo:down to business" "mo:goo" "mo:glossy lip flip" "mo:braided beard" "mo:cough" "mo:intrigue" "mo:fancy" "mo:daughnut" "mo:very suprise" "mo:naughty" "mo:slippers" "mo:cute suprise" "mo:m1 unshaven party horn" "mo:hardened" "mo:口 very suprise" "mo:scalpellum" "mo:si" "mo:whistle" "mo:spaghetti" "mo:tasty" "mo:gloating" "mo:suprised" "mo:oxy" "mo:fierce grafitti" "mo:giggle" "mo:laughing" "mo:juul" "mo:nom purp slime" "mo:baraku" "mo:yell" "mo:small" "mo:silly" "mo:lazy too long" "mo:drool (n)" "mo:multi color" "mo:zombie" "mo:double tooth" "mo:biohazardmask" "mo:mustache - small" "mo:ooh" "mo:defrost" "mo:ooo" "mo:cards" "mo:ten" "mo:chuckle" "mo:spooked" "mo:drippin pop" "mo:amaryllis" "mo:w" "mo:07e" "mo:focused" "mo:duh" "mo:woooah" "mo:vampire" "mo:bone" "mo:nasi lemak" "mo:cyberpunk respirator" "mo:toothie" "mo:perplexed" "mo:no attribute" "mo:pog" "mo:robo" "mo:chewing" "mo:unimpressed" "mo:mild spice" "mo:oops" "mo:m1_rage" "mo:honey boo boo" "mo:wow" "mo:talkative" "mo:m1 stuntman" "mo:cringe" "mo:laugh" "mo:triangle" "mo:uwu" "mo:plump" "mo:gap" "mo:pursed lips" "mo:no trait 2" "mo:shy" "mo:coins" "mo:baby" "mo:oh yeah!" "mo:fins" "mo:gas mask" "mo:kunai" "mo:dumb" "mo:milk" "mo:mumble" "mo:wheat" "mo:perverse" "mo:sml dark" "mo:fangies" "mo:basketball" "mo:stench fish" "mo:excited" "mo:wicked cackle" "mo:flat wide" "mo:stern" "mo:joke" "mo:furious" "mo:scroll" "mo:plain" "mo:blowfish" "mo:baby tooth" "mo:l2 roar" "mo:juicy lips" "mo:stubborn" "mo:peters" "mo:knife" "mo:rage" "mo:open" "mo:purple" "mo:pipe" "mo:blue" "mo:happy" "mo:discomfort" "mo:uhhhh" "mo:toothy" "mo:biting" "mo:teeth" "mo:jovial" "mo:smirk" "mo:white" "mo:small_excited" "mo:cat" "mo:full lips" "mo:tenacious" "mo:toothpick" "mo:simps" "mo:grimace" "mo:stache" "mo:snowflakes" "mo:embarrassed" "mo:orge" "mo:diamond" "mo:fish hook" "mo:mustache" "mo:big" "mo:oo" "mo:kazoo" "mo:neutral" "mo:yum" "mo:yeehaw" "mo:cannibal" "mo:thinking" "mo:pissed" "mo:smoking" "mo:joy" "mo:kiss" "mo:vuh" "mo:btfd" "mo:smiling" "mo:yammy" "mo:slimy" "mo:undecided" "mo:blunt" "mo:hmm" "mo:mask" "mo:pout" "mo:gangzter" "mo:face mask" "mo:full" "mo:anxious" "mo:beard" "mo:delicious" "mo:party" "mo:lazy " "mo:brown" "mo:flat" "mo:serious" "mo:pizza" "mo:frown" "mo:smoker" "mo:bubble gum" "mo:cigar" "mo:beep-bop" "mo:ok" "mo:candy" "mo:tooth pick" "mo:green" "mo:drool" "mo:hungry" "mo:breathe" "mo:carnivore" "mo:closed" "mo:relaxed" "mo:yellow" "mo:seal" "mo:rainbow" "mo:square" "mo:joint" "mo:silver tooth" "mo:sassy" "mo:orcish" "mo:lick" "mo:suprise" "mo:fish" "mo:locked" "mo:angry" "mo:lipstick" "mo:fangs" "mo:o" "mo:moustache" "mo:dagger" "mo:ehhhh" "mo:surprised" "mo:normal" "mo:grrrr" "mo:sad" "mo:upset" "mo:3" "mo:cigarette" "mo:Empty" "mo:dumbfounded" "mo:gold" "mo:grin" "mo:mouth" "mo:none" "mo:phoneme" "mo:pink" "mo:red" "mo:smile" "mo:tongue" ) .
+
+ind:nOutput1 a owl:NegativePropertyAssertion ;
+    owl:assertionProperty prop:hasOutput ;
+    owl:sourceIndividual ind:function01 ;
+    owl:targetIndividual ind:priceNFT .
+
+ind:nWarningMechanism a owl:NegativePropertyAssertion ;
+    owl:assertionProperty prop:causes ;
+    owl:sourceIndividual ind:Mechanism ;
+    owl:targetIndividual ind:Warning .
+
+ind:preparredData a classes:Daataset ;
+    prop:hasSize ind:sizeDataset .
+
+ind:warning a classes:state .
+
+prop:hasControl a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty .
+
+prop:hasMechanism a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty .
+
+prop:hasMinExecutors owl:propertyDisjointWith prop:hasMaxSize,
+        prop:hasMinSize .
+
+classes:Control owl:disjointWith classes:Mechanism .
+
+ind:function01 a classes:function,
+        classes:subFunctions ;
+    rdfs:label "Get the data of the NFT" ;
+    prop:hasInput ind:addressOfNFT ;
+    prop:hasMechanism ind:developers,
+        ind:nftportAPI ;
+    prop:hasOutput ind:dataNFT ;
+    prop:subFunction ind:function0 .
+
+ind:intervalExecutor a classes:KPI ;
+    prop:hasMinExecutors "3" .
+
+classes:Requirements a owl:classes ;
+    owl:oneOf ( ind:MlRequirements ind:preprocessingRequirements ) .
+
+ind:dataNFT a classes:output ;
+    rdfs:label "The data of the NFT" .
+
+ind:sizeDataset prop:hasMaxSize "10000" ;
+    prop:hasMinSize "500" .
+
+ind:addressOfNFT a classes:input ;
+    rdfs:label "Address of the NFT" .
+
+ind:function0 a classes:function ;
+    rdfs:label "Predict the price of the NFT" ;
+    prop:hasControl ind:MlRequirements,
+        ind:preprocessingRequirements ;
+    prop:hasInput ind:addressOfNFT ;
+    prop:hasMechanism ind:addressOfNFT,
+        ind:developers ;
+    prop:hasOutput ind:priceNFT ;
+    rdf:isDefinedBy "Team 5" .
+
+ind:resultOfValuation a classes:KPI,
+        classes:input,
+        classes:output ;
+    rdfs:label "Result of Valuation" ;
+    prop:hasInter ind:intervalValuation .
+
+ind:aggregatedData a classes:input,
+        classes:output ;
+    rdfs:label "Aggregated data" .
+
+ind:function03 a classes:SubFunction,
+        classes:subFunctions ;
+    rdfs:label "Predict the price" ;
+    prop:SubFunction ind:function0 ;
+    prop:hasMechanism ind:developers,
+        ind:nftportAPI ;
+    prop:hasOutput ind:priceNFT .
+
+ind:nftportAPI a classes:Mechanism,
+        classes:Resources ;
+    rdfs:label "NFTPort API" .
+
+ind:preparedData a classes:input,
+        classes:output ;
+    rdfs:label "Prepared data" .
+
+ind:preprocessingRequirements a classes:Requirements ;
+    rdfs:label "Preprocessing requirements" .
+
+ind:priceNFT a classes:output ;
+    rdfs:label "The price of the NFT" .
+
+ind:trainedModel a classes:input,
+        classes:output ;
+    rdfs:label "Trained model" .
+
+classes:input a owl:classes ;
+    owl:oneOf ( ind:addressOfNF ind:aggregatedData ind:preparedData ind:resultOfValuation ) .
+
+ind:MlRequirements a classes:Control,
+        classes:Requirements ;
+    rdfs:label "ML requirements" .
+
+classes:output a owl:classes ;
+    owl:oneOf ( ind:priceNFT ind:dataNFT ind:trainedModel ind:aggregatedData ind:preparedData ) .
+
+ind:developers a classes:Executor ;
+    rdfs:label "Developers" ;
+    prop:causes ind:Warning ;
+    prop:hasInter ind:intervalExecutor ;
+    prop:hasMinExecutors "3" .
+

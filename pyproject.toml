@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nft"
+version = "0.1.0"
+description = "Predict a price of NFT, but really bad"
+authors = ["VasiliiOptimist <vasya_mk@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^1.5.2"
+numpy = "^1.24.0"
+matplotlib = "^3.6.2"
+sklearn = "^0.0.post1"
+rdflib = "^6.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

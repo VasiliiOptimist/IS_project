@@ -1,0 +1,229 @@
+@prefix ind:<URN:inds:>.
+@prefix prop:<URN:prop:>.
+@prefix classes:<URN:class>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+ind:developers a classes:Executor;
+        rdfs:label "Developers".
+
+
+ind:nftportAPI a classes:Resources;
+        rdfs:label "NFTPort API". 
+
+
+ind:warning a classes:state.
+
+
+ind:preprocessingRequirements a classes:Requirements;
+        rdfs:label "Preprocessing requirements".
+
+
+ind:MlRequirements a classes:Requirements;
+        rdfs:label "ML requirements".
+
+
+ind:priceNFT a classes:output;
+        rdfs:label "The price of the NFT".
+
+
+ind:addressOfNFT a classes:input;
+        rdfs:label "Address of the NFT".
+
+
+ind:function0 a classes:function;
+        rdfs:label "Predict the price of the NFT";
+        rdf:isDefinedBy	"Team 5";
+        prop:hasControl ind:preprocessingRequirements;
+        prop:hasControl ind:MlRequirements;
+        prop:hasMechanism ind:developers;
+        prop:hasMechanism ind:addressOfNFT;
+        prop:hasInput ind:addressOfNFT;
+        prop:hasOutput ind:priceNFT.
+
+
+ind:dataNFT a classes:output;
+        rdfs:label "The data of the NFT".
+
+
+ind:function01 prop:subFunction ind:function0;
+	rdfs:label "Get the data of the NFT";
+        prop:hasMechanism ind:developers;
+        prop:hasMechanism ind:nftportAPI;
+        prop:hasInput ind:addressOfNFT;
+        prop:hasOutput ind:dataNFT.
+
+
+ind:trainedModel a classes:output;
+        a classes:input;
+        rdfs:label "Trained model".
+
+
+ind:function02 prop:SubFunction ind:function0;
+        a classes:subFunctions;
+	rdfs:label "Train model";
+        prop:hasControl ind:preprocessingRequirements;
+        prop:hasControl ind:MlRequirements;
+        prop:hasMechanism ind:developers;
+        prop:hasMechanism ind:nftportAPI;
+        prop:hasOutput ind:trainedModel.
+
+
+ind:function03 prop:SubFunction ind:function0;
+        a classes:subFunctions;
+	rdfs:label "Predict the price";
+        prop:hasMechanism ind:developers;
+        prop:hasMechanism ind:nftportAPI;
+        prop:hasOutput ind:priceNFT.
+
+
+ind:aggregatedData a classes:output;
+        a classes:input;
+        rdfs:label "Aggregated data".
+
+
+ind:function34 prop:SubFunction ind:function03;
+        a classes:subFunctions;
+	rdfs:label "Aggregate data";
+        prop:hasMechanism ind:developers;
+        prop:hasMechanism ind:nftportAPI;
+        prop:hasOutput ind:aggregatedData.
+
+ind:AggregatedDataset a classes:Dataset.
+
+ind:preparedData a classes:output;
+        a classes:input;
+        rdfs:label "Prepared data".
+
+
+ind:function35 prop:SubFunction ind:function03;
+        a classes:subFunctions;
+	rdfs:label "Preprocessing";
+        prop:hasMechanism ind:developers;
+        prop:hasControl ind:preprocessingRequirements;
+        prop:hasInput ind:aggregatedData;
+        prop:hasOutput ind:preparedData.
+
+
+ind:function36 prop:SubFunction ind:function03;
+        a classes:subFunctions;
+	rdfs:label "Train model";
+        prop:hasControl ind:MlRequirements;
+        prop:hasMechanism ind:developers;
+        prop:hasInput   ind:preparedData;
+        prop:hasInput ind:resultOfValuation;
+        prop:hasOutput ind:trainedModel.
+
+
+ind:resultOfValuation a classes:output;
+        a classes:input;
+        rdfs:label "Result of Valuation".
+
+
+ind:function37 prop:SubFunction ind:function03;
+        a classes:subFunctions;
+	rdfs:label "Valuation";
+        prop:hasControl ind:MlRequirements;
+        prop:hasMechanism ind:developers;
+        prop:hasOutput ind:trainedModel;
+        prop:hasOutput ind:resultOfValuation.
+
+# RULES
+
+#class-class rule
+ind:function01 a classes:subFunctions;
+        a classes:function.
+
+ind:nftportAPI a classes:Resources;
+        a classes:Mechanism.
+
+ind:Developers a classes:Executor;
+        a classes:Mechanism.
+
+ind:MlRequirements a classes:Requirements;
+        a classes:Control.
+
+# class-property rules
+ind:developers a classes:Executor;
+    prop:hasInter ind:intervalExecutor.
+
+ind:resultOfValuation a classes:KPI;
+    prop:hasInter ind:intervalValuation.
+
+ind:AggregatedDataset a classes:Dataset;
+    prop:hasSize ind:sizeDataset.
+
+# property-class rule
+ind:intervalExecutor prop:hasMinExecutors "3";
+    a classes:KPI.
+
+ind:function03 prop:SubFunction ind:function0;
+    a classes:SubFunction.
+
+ind:preparredData prop:hasSize ind:sizeDataset;
+    a classes:Daataset.
+
+#property-property rules (different subjects)
+ind:intervalExecutors prop:hasMinExecutors "3";
+        prop:hasMaxExecutors "5".
+        
+ind:sizeDataset prop:hasMinSize "500";
+    prop:hasMaxSize "10000".
+
+ind:Accuracy prop:hasMinAccuracy "70";
+    prop:hasPreferredAccuracy "90".
+
+
+# property-property rules (different subjects)
+ind:developers prop:hasMinExecutors "3";
+    prop:causes ind:Warning.
+
+ind:developers prop:hasMinExecutors "3";
+    prop:causes ind:Warning.
+
+ind:Dataset prop:hasMinSize "500";
+    prop:causes ind:Warning.
+
+ind:Accuracy prop:hasMinAccuracy "70";
+    prop:causes ind:Warning.
+
+classes:Requirements a owl:classes;
+    owl:oneOf (ind:MlRequirements ind:preprocessingRequirements).
+
+classes:output a owl:classes;
+    owl:oneOf (ind:priceNFT ind:dataNFT ind:trainedModel
+                ind:aggregatedData ind:preparedData).
+                
+
+classes:input a owl:classes;
+    owl:oneOf (ind:addressOfNF ind:aggregatedData ind:preparedData
+                ind:resultOfValuation).
+
+
+classes:Control owl:disjointWith classes:Mechanism.
+
+
+prop:hasMinExecutors owl:propertyDisjointWith prop:hasMinSize.
+prop:hasMinExecutors owl:propertyDisjointWith prop:hasMaxSize.
+
+
+prop:hasMechanism a owl:ObjectProperty;
+    a owl:IrreflexiveProperty;
+    a owl:AsymmetricProperty.
+
+prop:hasControl a owl:ObjectProperty;
+    a owl:IrreflexiveProperty;
+    a owl:AsymmetricProperty.
+
+
+ind:nOutput1 a owl:NegativePropertyAssertion;
+    owl:sourceIndividual ind:function01;
+    owl:assertionProperty prop:hasOutput;
+    owl:targetIndividual ind:priceNFT.
+
+ind:nWarningMechanism a owl:NegativePropertyAssertion;
+    owl:sourceIndividual ind:Mechanism;
+    owl:assertionProperty prop:causes;
+    owl:targetIndividual ind:Warning.
